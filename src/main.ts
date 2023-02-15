@@ -11,10 +11,10 @@ async function bootstrap() {
       transform: true, // Castea la info de los inputs e infiere los tipos de datos
       transformOptions: {
         enableImplicitConversion: true,
-      }
+      },
     }),
   );
   app.setGlobalPrefix('api/v1');
-  await app.listen(3000);
+  await app.listen(process.env.PORT);
 }
 bootstrap();
